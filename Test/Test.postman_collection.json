@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "1fd63115-c82b-4501-af3e-2599eaa36c10",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerCode\": \"cs-008\",\r\n  \"name\": \"Toko Mita Sasmita\",\r\n  \"noKK\": \"-\",\r\n  \"telephone\": \"08123456789\",\r\n  \"address\": \"{{$randomStreetAddress}}\",\r\n  \"village\": \"\",\r\n  \"districts\": \"\",\r\n  \"city\": \"Medan\",\r\n  \"province\": \"SUMUT\",\r\n  \"postalCode\": \"21876\",\r\n  \"fullAddress\": \"\",\r\n  \"npwp\": \"000000.00000.00000\",\r\n  \"latitude\": {{$randomLatitude}},\r\n  \"longitude\": {{$randomLongitude}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44313/api/Customer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"7ac946b3-42b4-4916-a578-c91d115d9bc1\",\r\n    \"customerCode\": \"CS-006\",\r\n    \"name\": \"Toko Mita Sasmita\",\r\n    \"noKK\": \"-\",\r\n    \"telephone\": \"08123456789\",\r\n    \"address\": \"386 Ryleigh Rapids\",\r\n    \"village\": \"\",\r\n    \"districts\": \"\",\r\n    \"city\": \"Medan\",\r\n    \"province\": \"SUMUT\",\r\n    \"postalCode\": \"21876\",\r\n    \"fullAddress\": \"\",\r\n    \"npwp\": \"000000.00000.00000\",\r\n    \"latitude\": 21.2656,\r\n    \"longitude\": 90.0752,\r\n    \"listOrder\": null,\r\n    \"createdTime\": \"2021-09-04T06:35:26.9168857+07:00\",\r\n    \"modifiedTime\": \"2021-09-04T06:35:26.9168986+07:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44313/api/Customer/7ac946b3-42b4-4916-a578-c91d115d9bc1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Customer",
+								"7ac946b3-42b4-4916-a578-c91d115d9bc1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44313/api/Customer/cdaef6e1-ad10-4d3e-8853-1ecaf6fb6370",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Customer",
+								"cdaef6e1-ad10-4d3e-8853-1ecaf6fb6370"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44313/api/Customer/GetAll",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Customer",
+								"GetAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44313/api/Customer/303458ba-5fd2-4378-84bc-a0391649579b",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Customer",
+								"303458ba-5fd2-4378-84bc-a0391649579b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productCode\": \"PC-0004\",\r\n  \"barcode\": \"PC-0004\",\r\n  \"name\": \"Product\",\r\n  \"price\": 5000,\r\n  \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n  \"unitName\": \"PCS\",\r\n  \"isActive\": true,\r\n  \"isTax\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44313/api/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": \"0e87d031-d4f8-445c-b8e1-ee7a76bfa352\",\r\n        \"productCode\": \"PC-0001\",\r\n        \"barcode\": \"PC-0001\",\r\n        \"name\": \"Product\",\r\n        \"price\": 5000,\r\n        \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n        \"unitName\": \"PCS\",\r\n        \"isActive\": true,\r\n        \"isTax\": true,\r\n        \"createdTime\": \"2021-09-04T06:45:12.391344+07:00\",\r\n        \"modifiedTime\": \"2021-09-04T06:45:12.3914273+07:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44313/api/Product/0e87d031-d4f8-445c-b8e1-ee7a76bfa352",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Product",
+								"0e87d031-d4f8-445c-b8e1-ee7a76bfa352"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44313/api/Product/0e87d031-d4f8-445c-b8e1-ee7a76bfa352",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Product",
+								"0e87d031-d4f8-445c-b8e1-ee7a76bfa352"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44313/api/Product/GetAll",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Product",
+								"GetAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44313/api/Product/0e87d031-d4f8-445c-b8e1-ee7a76bfa352",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Product",
+								"0e87d031-d4f8-445c-b8e1-ee7a76bfa352"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Unit",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"box 24\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44313/api/Unit",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Unit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6fc5d5af-1b54-409b-94a2-a8e7570e71aa\",\r\n    \"name\": \"BOX 24\",\r\n    \"createdTime\": \"2021-09-04T05:05:28.6297239+07:00\",\r\n    \"modifiedTime\": \"2021-09-04T05:05:28.6297584+07:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44313/api/Unit/6fc5d5af-1b54-409b-94a2-a8e7570e71aa",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Unit",
+								"6fc5d5af-1b54-409b-94a2-a8e7570e71aa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44313/api/Unit/6fc5d5af-1b54-409b-94a2-a8e7570e71aa",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Unit",
+								"6fc5d5af-1b54-409b-94a2-a8e7570e71aa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44313/api/Unit/GetAll",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Unit",
+								"GetAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44313/api/Unit/f0376ccf-02f8-4113-ba72-120d8b41898b",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Unit",
+								"f0376ccf-02f8-4113-ba72-120d8b41898b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderNo\": \"OR-202108041\",\r\n  \"customerId\": \"384062a2-a930-47f6-95d5-9f9e7932e956\",\r\n  \"customerName\": \"Toko Mita Sasmita\",\r\n  \"notes\": \"Besok diantar jam 9.00 pagi ya..\",\r\n  \"listOrderItem\": [\r\n    {\r\n      \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n      \"productCode\": \"PC-0003\",\r\n      \"productName\": \"Product\",\r\n      \"quantity\": 100,\r\n      \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n      \"unitName\": \"PCS\",\r\n      \"price\": 6980000,\r\n      \"discountPercentage\": \"0\"\r\n    },\r\n    {\r\n      \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n      \"productCode\": \"PC-0003\",\r\n      \"productName\": \"Product\",\r\n      \"quantity\": 100,\r\n      \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n      \"unitName\": \"PCS\",\r\n      \"price\": 6980000,\r\n      \"discountPercentage\": \"0\"\r\n    },\r\n    {\r\n      \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n      \"productCode\": \"PC-0003\",\r\n      \"productName\": \"Product\",\r\n      \"quantity\": 100,\r\n      \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n      \"unitName\": \"PCS\",\r\n      \"price\": 6980000,\r\n      \"discountPercentage\": \"0\"\r\n    },\r\n    {\r\n      \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n      \"productCode\": \"PC-0003\",\r\n      \"productName\": \"Product\",\r\n      \"quantity\": 100,\r\n      \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n      \"unitName\": \"PCS\",\r\n      \"price\": 6980000,\r\n      \"discountPercentage\": \"0\"\r\n    },\r\n    {\r\n      \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n      \"productCode\": \"PC-0003\",\r\n      \"productName\": \"Product\",\r\n      \"quantity\": 100,\r\n      \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n      \"unitName\": \"PCS\",\r\n      \"price\": 6980000,\r\n      \"discountPercentage\": \"0\"\r\n    },{\r\n      \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n      \"productCode\": \"PC-0003\",\r\n      \"productName\": \"Product\",\r\n      \"quantity\": 100,\r\n      \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n      \"unitName\": \"PCS\",\r\n      \"price\": 6980000,\r\n      \"discountPercentage\": \"0\"\r\n    },\r\n    {\r\n      \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n      \"productCode\": \"PC-0003\",\r\n      \"productName\": \"Product\",\r\n      \"quantity\": 100,\r\n      \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n      \"unitName\": \"PCS\",\r\n      \"price\": 6980000,\r\n      \"discountPercentage\": \"0\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44313/api/Order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"00220df9-3636-4e9c-be49-7a69e7bbd907\",\r\n    \"orderNo\": \"OR-202108041\",\r\n    \"date\": \"2021-09-04T10:37:05.2198209+07:00\",\r\n    \"customerId\": \"384062a2-a930-47f6-95d5-9f9e7932e956\",\r\n    \"customerName\": \"Toko Mita Sasmita\",\r\n    \"customerAddress\": null,\r\n    \"subTotal\": 4886000000,\r\n    \"discountPercentage\": 0,\r\n    \"discountAmount\": 0,\r\n    \"taxPercentage\": 10.0,\r\n    \"taxAmount\": 4886000.0,\r\n    \"total\": 4890886000.0,\r\n    \"notes\": \"Besok diantar jam 9.00 pagi ya..\",\r\n    \"customer\": null,\r\n    \"listOrderItem\": [\r\n        {\r\n            \"id\": \"6309a7bc-f90f-4bbb-a361-fb9c4e6cff60\",\r\n            \"orderId\": \"00220df9-3636-4e9c-be49-7a69e7bbd907\",\r\n            \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n            \"productCode\": \"PC-0003\",\r\n            \"productName\": \"Product\",\r\n            \"quantity\": 100,\r\n            \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n            \"unitName\": \"PCS\",\r\n            \"price\": 6980000,\r\n            \"taxPercentage\": 10.0,\r\n            \"taxAmount\": 698000.0,\r\n            \"discountPercentage\": \"0\",\r\n            \"discountAmount\": 0,\r\n            \"lineTotal\": 698000000,\r\n            \"createdTime\": \"2021-09-04T10:37:05.2258923+07:00\",\r\n            \"modifiedTime\": \"2021-09-04T10:37:05.2259877+07:00\"\r\n        },\r\n        {\r\n            \"id\": \"99e98f14-986e-4559-bf5b-f64bb018d82f\",\r\n            \"orderId\": \"00220df9-3636-4e9c-be49-7a69e7bbd907\",\r\n            \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n            \"productCode\": \"PC-0003\",\r\n            \"productName\": \"Product\",\r\n            \"quantity\": 100,\r\n            \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n            \"unitName\": \"PCS\",\r\n            \"price\": 6980000,\r\n            \"taxPercentage\": 10.0,\r\n            \"taxAmount\": 698000.0,\r\n            \"discountPercentage\": \"0\",\r\n            \"discountAmount\": 0,\r\n            \"lineTotal\": 698000000,\r\n            \"createdTime\": \"2021-09-04T10:37:05.2291802+07:00\",\r\n            \"modifiedTime\": \"2021-09-04T10:37:05.2291847+07:00\"\r\n        },\r\n        {\r\n            \"id\": \"c340e174-d794-4579-a5b5-88210a518f53\",\r\n            \"orderId\": \"00220df9-3636-4e9c-be49-7a69e7bbd907\",\r\n            \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n            \"productCode\": \"PC-0003\",\r\n            \"productName\": \"Product\",\r\n            \"quantity\": 100,\r\n            \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n            \"unitName\": \"PCS\",\r\n            \"price\": 6980000,\r\n            \"taxPercentage\": 10.0,\r\n            \"taxAmount\": 698000.0,\r\n            \"discountPercentage\": \"0\",\r\n            \"discountAmount\": 0,\r\n            \"lineTotal\": 698000000,\r\n            \"createdTime\": \"2021-09-04T10:37:05.2295441+07:00\",\r\n            \"modifiedTime\": \"2021-09-04T10:37:05.2295467+07:00\"\r\n        },\r\n        {\r\n            \"id\": \"480d0a64-479b-47fd-882d-70df9569f395\",\r\n            \"orderId\": \"00220df9-3636-4e9c-be49-7a69e7bbd907\",\r\n            \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n            \"productCode\": \"PC-0003\",\r\n            \"productName\": \"Product\",\r\n            \"quantity\": 100,\r\n            \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n            \"unitName\": \"PCS\",\r\n            \"price\": 6980000,\r\n            \"taxPercentage\": 10.0,\r\n            \"taxAmount\": 698000.0,\r\n            \"discountPercentage\": \"0\",\r\n            \"discountAmount\": 0,\r\n            \"lineTotal\": 698000000,\r\n            \"createdTime\": \"2021-09-04T10:37:05.2295642+07:00\",\r\n            \"modifiedTime\": \"2021-09-04T10:37:05.2295647+07:00\"\r\n        },\r\n        {\r\n            \"id\": \"4c69c8d8-0650-4758-a392-50eede7a9e48\",\r\n            \"orderId\": \"00220df9-3636-4e9c-be49-7a69e7bbd907\",\r\n            \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n            \"productCode\": \"PC-0003\",\r\n            \"productName\": \"Product\",\r\n            \"quantity\": 100,\r\n            \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n            \"unitName\": \"PCS\",\r\n            \"price\": 6980000,\r\n            \"taxPercentage\": 10.0,\r\n            \"taxAmount\": 698000.0,\r\n            \"discountPercentage\": \"0\",\r\n            \"discountAmount\": 0,\r\n            \"lineTotal\": 698000000,\r\n            \"createdTime\": \"2021-09-04T10:37:05.2295705+07:00\",\r\n            \"modifiedTime\": \"2021-09-04T10:37:05.2295707+07:00\"\r\n        },\r\n        {\r\n            \"id\": \"c9483427-506d-43d4-9834-c175e25e3d74\",\r\n            \"orderId\": \"00220df9-3636-4e9c-be49-7a69e7bbd907\",\r\n            \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n            \"productCode\": \"PC-0003\",\r\n            \"productName\": \"Product\",\r\n            \"quantity\": 100,\r\n            \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n            \"unitName\": \"PCS\",\r\n            \"price\": 6980000,\r\n            \"taxPercentage\": 10.0,\r\n            \"taxAmount\": 698000.0,\r\n            \"discountPercentage\": \"0\",\r\n            \"discountAmount\": 0,\r\n            \"lineTotal\": 698000000,\r\n            \"createdTime\": \"2021-09-04T10:37:05.2295769+07:00\",\r\n            \"modifiedTime\": \"2021-09-04T10:37:05.2295772+07:00\"\r\n        },\r\n        {\r\n            \"id\": \"e2ff7533-00ed-43ef-9d69-b8b494dfb625\",\r\n            \"orderId\": \"00220df9-3636-4e9c-be49-7a69e7bbd907\",\r\n            \"productId\": \"c3613a58-59d2-40fa-9946-0862f4419d66\",\r\n            \"productCode\": \"PC-0003\",\r\n            \"productName\": \"Product\",\r\n            \"quantity\": 100,\r\n            \"unitId\": \"45a1ba79-f02c-4cee-acaa-a711dba479ac\",\r\n            \"unitName\": \"PCS\",\r\n            \"price\": 6980000,\r\n            \"taxPercentage\": 10.0,\r\n            \"taxAmount\": 698000.0,\r\n            \"discountPercentage\": \"0\",\r\n            \"discountAmount\": 0,\r\n            \"lineTotal\": 698000000,\r\n            \"createdTime\": \"2021-09-04T10:37:05.2295824+07:00\",\r\n            \"modifiedTime\": \"2021-09-04T10:37:05.2295826+07:00\"\r\n        }\r\n    ],\r\n    \"createdTime\": \"2021-09-04T10:37:05.2198885+07:00\",\r\n    \"modifiedTime\": \"2021-09-04T10:37:07.6865094+07:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44313/api/Order/00220df9-3636-4e9c-be49-7a69e7bbd907",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Order",
+								"00220df9-3636-4e9c-be49-7a69e7bbd907"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44313/api/Order/GetAll",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Order",
+								"GetAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44313/api/Order/id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44313",
+							"path": [
+								"api",
+								"Order",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
