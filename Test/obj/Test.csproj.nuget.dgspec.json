@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Test\\Test\\Test.csproj": {}
+    "E:\\SampleAPI\\Test\\Test.csproj": {}
   },
   "projects": {
-    "E:\\Test\\Test\\Test.csproj": {
+    "E:\\SampleAPI\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Test\\Test\\Test.csproj",
+        "projectUniqueName": "E:\\SampleAPI\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "E:\\Test\\Test\\Test.csproj",
+        "projectPath": "E:\\SampleAPI\\Test\\Test.csproj",
         "packagesPath": "C:\\Users\\SimpliDOTS\\.nuget\\packages\\",
-        "outputPath": "E:\\Test\\Test\\obj\\",
+        "outputPath": "E:\\SampleAPI\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -46,6 +46,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.9, )"
@@ -99,6 +107,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.18, 3.1.18]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

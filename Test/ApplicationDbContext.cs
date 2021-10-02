@@ -3,13 +3,11 @@ using Test.Models;
 
 namespace Test
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : AuditableIdentityContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
-        public ApplicationDbContext()
-        {
-        }
+        
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Customer>()

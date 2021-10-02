@@ -30,6 +30,20 @@ namespace Test.Controllers
             Configuration = config;
         }
 
+        #region Get Last Order NO
+
+        [HttpGet("LazyLoad")]
+        public string LazyLoad()
+        {
+            var data =
+                OrderRepository
+                    .GetOrders().FirstOrDefault();
+            var orderitem = data.ListOrderItem.FirstOrDefault();
+
+            return orderitem.ProductCode;
+        }
+
+        #endregion
 
         #region Get All
 
@@ -130,7 +144,9 @@ namespace Test.Controllers
             try
             {
                 PostPut(Order);
-                OrderRepository.UpdateOrder(Order);
+                //OrderRepository.UpdateOrder(Order);
+                var oldProduct = await db.Orders.FindAsync(Id);
+                db.Entry(oldProduct).CurrentValues.SetValues(Order);
                 await OrderRepository.SaveAsync();
                 trx.Commit();
                 return Ok(Order);
