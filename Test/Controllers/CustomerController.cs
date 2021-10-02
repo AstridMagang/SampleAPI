@@ -104,6 +104,8 @@ namespace Test.Controllers
                 Customer.ModifiedTime = DateTime.Now;
                 Customer.CustomerCode = Customer.CustomerCode.ToUpper().Trim();
                 Customer.Name = Customer.Name.Trim();
+                var oldCustomer = await db.Customers.FindAsync(Id);
+                db.Entry(oldCustomer).CurrentValues.SetValues(Customer);
                 await CustomerRepository.SaveAsync();
                 trx.Commit();
                 cacheHelper.RemoveMemchace("Customers");

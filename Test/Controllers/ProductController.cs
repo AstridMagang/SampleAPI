@@ -107,6 +107,8 @@ namespace Test.Controllers
                 Product.Barcode = Product.Barcode.Trim();
                 Product.Name = Product.Name.Trim();
                 Product.ModifiedTime = DateTime.Now;
+                var oldProduct = await db.Products.FindAsync(Id);
+                db.Entry(oldProduct).CurrentValues.SetValues(Product);
                 await ProductRepository.SaveAsync();
                 trx.Commit();
                 cacheHelper.RemoveMemchace("Products");

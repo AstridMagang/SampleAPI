@@ -104,6 +104,8 @@ namespace Test.Controllers
             {
                 Unit.ModifiedTime = DateTime.Now;
                 Unit.Name = Unit.Name.ToUpper().Trim();
+                var oldUnit = await db.Units.FindAsync(Id);
+                db.Entry(oldUnit).CurrentValues.SetValues(Unit);
                 await UnitRepository.SaveAsync();
                 trx.Commit();
                 cacheHelper.RemoveMemchace("Units");

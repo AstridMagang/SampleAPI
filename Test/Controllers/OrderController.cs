@@ -144,8 +144,8 @@ namespace Test.Controllers
             try
             {
                 PostPut(Order);
-                var oldProduct = await db.Orders.FindAsync(Id);
-                db.Entry(oldProduct).CurrentValues.SetValues(Order);
+                var oldOrder = await db.Orders.FindAsync(Id);
+                db.Entry(oldOrder).CurrentValues.SetValues(Order);
                 await OrderRepository.SaveAsync();
                 trx.Commit();
                 return Ok(Order);
