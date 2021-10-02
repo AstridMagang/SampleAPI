@@ -144,7 +144,6 @@ namespace Test.Controllers
             try
             {
                 PostPut(Order);
-                //OrderRepository.UpdateOrder(Order);
                 var oldProduct = await db.Orders.FindAsync(Id);
                 db.Entry(oldProduct).CurrentValues.SetValues(Order);
                 await OrderRepository.SaveAsync();
